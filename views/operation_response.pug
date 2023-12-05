@@ -1,0 +1,19 @@
+html 
+  head
+  body 
+    h1 #{operation}
+    case operation
+      when 'all'
+        p Mean: 
+          span #{mean} 
+        p Median: 
+          span #{median}
+        p Mode: 
+          span #{mode}
+      
+      default
+        p Result:
+          span #{value}
+    if timestamp
+      p Timestamp 
+        span #{new Date(timestamp)}
